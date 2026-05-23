@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veloura's Booking page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="booking.css">
+
+</head>
+
+<body class="bg-gray-100">
+   
+      <!-- Navbar -->
+      <nav class="navbar">
+        <h1 class="nav__title">Veloura Stay</h1>
+        <i
+          class="fa-solid fa-bars"
+          style="color: rgb(255, 255, 255)"
+          id="menubar"
+        ></i>
+
+        <div class="nav__menu">
+          <a class="nav__menu__link" href="index.html">Home</a>
+          <a class="nav__menu__link" href="">Destinations</a>
+          <a class="nav__menu__link" href="">Experiences</a>
+          <a class="nav__menu__link" href="">Services</a>
+          <a class="nav__menu__link" href="">Book Your Stay</a>
+          <a class="nav__menu__link" href="contact.html">Contact Us</a>
+        </div>
+      </nav>
+      <!-- Small screen menubar -->
+      <div id="sidebar" class="sm__sidebar">
+        <div class="sm__sidebar__menu">
+          <a class="sm__sidebar__menu--link" href="index.html">Home</a>
+          <a class="nav__menu__link" href="">Destinations</a>
+          <a class="nav__menu__link" href="">Experiences</a>
+          <a class="nav__menu__link" href="">Services</a>
+          <a class="nav__menu__link" href="">Book Your Stay</a>
+          <a class="sm__sidebar__menu--link" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+
+    <!-- SEARCH -->
+    <div class="flex justify-center mt-14">
+        <input id="search" type="text" placeholder="Search here your destinations"
+            class="border border-black text-center p-2 rounded" style="width: 80%;">
+    </div>
+
+    <!-- MAIN -->
+    <section class="max-w-7xl mx-auto p-5 lg:p-8">
+        <div class="flex flex-col lg:flex-row gap-8 items-stretch">
+
+            <!-- LEFT SIDE -->
+            <div class="flex-1">
+
+                <!-- MAIN IMAGE -->
+                <div class="relative overflow-hidden rounded-3xl shadow-lg">
+                    <img id="mainImage" src="./images/antonio-araujo-K_N8CJHO7jo-unsplash.jpg"
+                        class="w-full h-[450px] object-cover duration-300" alt="Hotel Image">
+                    <div class="absolute top-5 right-5 bg-white px-5 py-3 rounded-full font-semibold text-lg shadow-md">
+                        ⭐ 4.8 (320 Reviews)
+                    </div>
+                </div>
+
+                <!-- ROOM CATEGORY -->
+                <div class="mt-8">
+                    <h2 class="text-3xl font-bold mb-5">Hotel Room Views</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+
+                        <button onclick="showCategory('ocean')"
+                            class="text-white py-4 rounded-2xl font-semibold transition hover:opacity-90"
+                            style="background-color: var(--c1);">
+                            Ocean View
+                        </button>
+
+                        <button onclick="showCategory('mountain')"
+                            class="text-white py-4 rounded-2xl font-semibold transition hover:opacity-90"
+                            style="background-color: var(--c3);">
+                            Mountain View
+                        </button>
+
+                        <button onclick="showCategory('city')"
+                            class="text-white py-4 rounded-2xl font-semibold transition hover:opacity-90"
+                            style="background-color: var(--c3); color: #5a4a44;">
+                            City View
+                        </button>
+
+                        <button onclick="showCategory('luxury')"
+                            class="text-white py-4 rounded-2xl font-semibold transition hover:opacity-90"
+                            style="background-color: #b89088;">
+                            Luxury Suite
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- IMAGE GALLERY -->
+                <div id="gallery" class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6"></div>
+
+                <!-- HOTEL DETAILS -->
+                <div class="mt-10">
+                    <h1 class="text-5xl font-bold text-gray-900 mb-4">Ocean View Resort</h1>
+                    <p class="text-gray-600 text-lg mb-6 flex items-center gap-2">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Goa, India
+                    </p>
+                    <p class="text-gray-700 leading-8 text-lg">
+                        Experience luxury and comfort with breathtaking views, infinity pools,
+                        private beaches, spa treatments, rooftop dining, and premium hospitality.
+                    </p>
+                </div>
+
+                <!-- AMENITIES -->
+                <div class="mt-10">
+                    <h2 class="text-3xl font-bold mb-6">Amenities</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 text-center">
+
+                        <div class="bg-white p-5 rounded-2xl shadow hover:scale-105 transition">
+                            <i class="fa-solid fa-wifi text-3xl mb-3" style="color: var(--c1);"></i>
+                            <p>Free Wifi</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl shadow hover:scale-105 transition">
+                            <i class="fa-solid fa-water-ladder text-3xl mb-3" style="color: var(--c1);"></i>
+                            <p>Swimming Pool</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl shadow hover:scale-105 transition">
+                            <i class="fa-solid fa-utensils text-3xl mb-3" style="color: var(--c1);"></i>
+                            <p>Restaurant</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl shadow hover:scale-105 transition">
+                            <i class="fa-solid fa-spa text-3xl mb-3" style="color: var(--c1);"></i>
+                            <p>Spa</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl shadow hover:scale-105 transition">
+                            <i class="fa-solid fa-square-parking text-3xl mb-3" style="color: var(--c1);"></i>
+                            <p>Parking</p>
+                        </div>
+
+                        <div class="bg-white p-5 rounded-2xl shadow hover:scale-105 transition">
+                            <i class="fa-regular fa-snowflake text-3xl mb-3" style="color: var(--c1);"></i>
+                            <p>Air Conditioning</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div id="image-gall">
+                    <h1 class="mt-14" style="color: #b89088;">2025 Award Winner</h1>
+                    <p class="mt-9">Our happy customer's memorable moment</p>
+                    <img src="./images/winners.jpg" class="mt-9 rounded-2xl" alt="">
+                </div>
+
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="w-full lg:w-[460px] bg-white rounded-3xl shadow-lg p-6 self-stretch">
+
+                <h2 class="text-3xl font-bold mb-6">Book Your Stay</h2>
+
+                <!-- ROOM TYPE -->
+                <div class="mb-6">
+                    <label class="font-semibold block mb-3 text-lg">Select Room Type</label>
+                    <select id="roomType" class="w-full border border-gray-300 rounded-xl p-4 text-lg outline-none"
+                        onchange="updatePrice()">
+                        <option value="6500">Deluxe Room - ₹ 6,500 / night</option>
+                        <option value="9000">Premium Suite - ₹ 9,000 / night</option>
+                        <option value="12000">Luxury Villa - ₹ 12,000 / night</option>
+                    </select>
+                </div>
+
+                <!-- ADULTS -->
+                <div class="mb-5">
+                    <label class="font-semibold block mb-3 text-lg">Adults</label>
+                    <div class="flex items-center gap-3">
+                        <button onclick="decreaseGuests()"
+                            class="w-14 h-14 rounded-xl text-3xl transition hover:opacity-80"
+                            style="background-color: var(--c2);">-</button>
+                        <div id="guestCount"
+                            class="w-28 h-14 rounded-xl flex items-center justify-center text-2xl font-bold"
+                            style="background-color: var(--c2);">2</div>
+                        <button onclick="increaseGuests()"
+                            class="w-14 h-14 rounded-xl text-3xl transition hover:opacity-80"
+                            style="background-color: var(--c2);">+</button>
+                    </div>
+                </div>
+
+                <!-- CHILDREN -->
+                <div class="mb-6">
+                    <label class="font-semibold block mb-3 text-lg">Children (Under 18)</label>
+                    <div class="flex items-center gap-3">
+                        <button onclick="decreaseChildren()"
+                            class="w-14 h-14 rounded-xl text-3xl transition hover:opacity-80"
+                            style="background-color: var(--c2);">-</button>
+                        <div id="childrenCount"
+                            class="w-28 h-14 rounded-xl flex items-center justify-center text-2xl font-bold"
+                            style="background-color: var(--c2);">0</div>
+                        <button onclick="increaseChildren()"
+                            class="w-14 h-14 rounded-xl text-3xl transition hover:opacity-80"
+                            style="background-color: var(--c2);">+</button>
+                    </div>
+                    <p class="text-gray-500 mt-2">₹500 extra charge per child</p>
+                </div>
+
+                <!-- DATE -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-6">
+                    <div>
+                        <label class="font-semibold block mb-3 text-lg">Check In</label>
+                        <input type="date" id="checkIn"
+                            class="w-full border border-gray-300 rounded-xl p-4 outline-none" onchange="updatePrice()">
+                    </div>
+                    <div>
+                        <label class="font-semibold block mb-3 text-lg">Check Out</label>
+                        <input type="date" id="checkOut"
+                            class="w-full border border-gray-300 rounded-xl p-4 outline-none" onchange="updatePrice()">
+                    </div>
+                </div>
+
+                <!-- DURATION -->
+                <div class="rounded-xl p-4 mb-6 font-semibold"
+                    style="background-color: var(--c2); border: 1px solid var(--c4); color: #7a5c56;">
+                    <i class="fa-regular fa-calendar"></i>
+                    Duration: <span id="duration">4</span> Nights
+                </div>
+
+                <!-- SPECIAL REQUEST -->
+                <div class="mb-6">
+                    <label class="font-semibold block mb-3 text-lg">Special Request</label>
+                    <textarea id="message"
+                        class="w-full border border-gray-300 rounded-xl p-4 outline-none h-28 resize-none"
+                        placeholder="High floor room, sea view, extra pillows..."></textarea>
+                    <div class="count" id="counter">0 / 150 characters</div>
+                    <div class="warning hidden text-red-500" id="warning">Character limit exceeded</div>
+                </div>
+
+                <!-- GUEST DETAILS -->
+                <div class="mb-6">
+                    <h3 class="text-2xl font-bold mb-4">Guest Details</h3>
+                    <div class="space-y-4">
+                        <div>
+                            <input id="name" type="text" placeholder="Full Name"
+                                class="w-full border border-gray-300 rounded-xl p-4 outline-none">
+                            <span id="name-error" class="text-red-500 hidden">Name must contains only letters</span>
+                        </div>
+                        <div>
+                            <input id="email" type="email" placeholder="Email Address"
+                                class="w-full border border-gray-300 rounded-xl p-4 outline-none">
+                            <span id="email-error" class="text-red-500 hidden">Enter a valid E-mail address</span>
+                        </div>
+                        <div>
+                            <input id="phone" type="tel" placeholder="Phone Number"
+                                class="w-full border border-gray-300 rounded-xl p-4 outline-none">
+                            <span id="phone-error" class="text-red-500 hidden">Please enter your phone number</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRICE DETAILS -->
+                <div class="border rounded-2xl p-5 mb-6">
+                    <h3 class="text-2xl font-bold mb-5">Price Details</h3>
+                    <div class="flex justify-between mb-4 text-lg">
+                        <span>Room Price</span>
+                        <span id="roomPrice">₹ 26,000</span>
+                    </div>
+                    <div class="flex justify-between mb-4 text-lg">
+                        <span>Extra Guest Charge</span>
+                        <span id="guestPrice">₹ 1,000</span>
+                    </div>
+                    <div class="flex justify-between mb-4 text-lg">
+                        <span>Children Charge</span>
+                        <span id="childrenPrice">₹ 0</span>
+                    </div>
+                    <div class="flex justify-between mb-4 text-lg">
+                        <span>GST & Taxes</span>
+                        <span id="taxPrice">₹ 2,000</span>
+                    </div>
+                    <hr class="my-4">
+                    <div class="flex justify-between items-center">
+                        <h4 class="text-2xl font-bold">Total Price</h4>
+                        <span id="totalPrice" class="text-4xl font-bold" style="color: var(--c1);">₹ 29,000</span>
+                    </div>
+                </div>
+
+                <!-- PAYMENT METHODS -->
+                <div class="mb-6">
+                    <h3 class="text-2xl font-bold mb-4">Payment Method</h3>
+                    <div class="grid grid-cols-2 gap-4">
+
+                        <button class="border rounded-2xl p-4 transition" style="border-color: var(--c4);"
+                            onmouseover="this.style.backgroundColor='var(--c2)'"
+                            onmouseout="this.style.backgroundColor=''">
+                            <i class="fa-solid fa-credit-card text-2xl mb-2" style="color: var(--c1);"></i>
+                            <p>Card</p>
+                        </button>
+
+                        <button class="border rounded-2xl p-4 transition" style="border-color: var(--c4);"
+                            onmouseover="this.style.backgroundColor='var(--c2)'"
+                            onmouseout="this.style.backgroundColor=''">
+                            <i class="fa-brands fa-google-pay text-2xl mb-2" style="color: var(--c1);"></i>
+                            <p>GPay</p>
+                        </button>
+
+                        <button class="border rounded-2xl p-4 transition" style="border-color: var(--c4);"
+                            onmouseover="this.style.backgroundColor='var(--c2)'"
+                            onmouseout="this.style.backgroundColor=''">
+                            <i class="fa-solid fa-building-columns text-2xl mb-2" style="color: var(--c1);"></i>
+                            <p>Net Banking</p>
+                        </button>
+
+                        <button class="border rounded-2xl p-4 transition" style="border-color: var(--c4);"
+                            onmouseover="this.style.backgroundColor='var(--c2)'"
+                            onmouseout="this.style.backgroundColor=''">
+                            <i class="fa-solid fa-wallet text-2xl mb-2" style="color: var(--c1);"></i>
+                            <p>Wallet</p>
+                        </button>
+
+                    </div>
+                </div>
+
+                <!-- BUTTONS -->
+                <div class="flex gap-4">
+                    <button class="w-1/2 py-4 rounded-2xl font-semibold transition hover:opacity-80"
+                        style="background-color: var(--c1); border: 1px solid var(--c3);">
+                        Back
+                    </button>
+                    <button id="confirmBtn" disabled
+                        class="w-1/2 text-black py-4 rounded-2xl font-semibold transition hover:opacity-80"
+                        style="background-color: var(--c1);">
+                        Confirm Booking
+                    </button>
+                </div>
+
+                <!-- SAFE -->
+                <p class="text-center mt-5" style="color: var(--c3);">
+                    <i class="fa-solid fa-lock"></i>
+                    Your booking is safe and secure.
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="./booking.js"></script>
+</body>
+
+</html>
