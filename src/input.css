@@ -1,0 +1,18 @@
+@import "tailwindcss"; 
+
+@theme {
+  --color-sandal-50: oklch(0.9367 0.0119 51.31);
+  --color-pink-900: oklch(0.6704 0.0649 7.5);
+}
+
+body{
+       font-family: "Playfair Display", serif;
+    }
+
+p, .footer, #contact__title{
+    font-family: "Poppins", sans-serif;
+}
+
+a:hover{
+  text-decoration: underline;
+}
