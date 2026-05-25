@@ -70,5 +70,46 @@ titles.forEach((title) =>{
 
 });
 
+// Slider
+
+let slides = document.querySelectorAll(".slide");
+
+let dots = document.querySelectorAll(".dot");
+
+let currentIndex = 0;
+
+dots.forEach(function(dot, index){
+
+   dot.addEventListener("click", ()=>{
+
+      showSlide(index);
+
+   });
+
+});
+
+function showSlide(index){
+
+   slides.forEach(function(slide){
+
+      slide.classList.remove("active");
+
+   });
+
+   dots.forEach(function(dot){
+
+      dot.classList.remove("active-dot");
+
+   });
+
+   slides[index].classList.add("active");
+
+   dots[index].classList.add("active-dot");
+
+   currentIndex = index;
+
+}
+
+
 
 
