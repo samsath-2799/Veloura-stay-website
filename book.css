@@ -1,0 +1,125 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body{
+    /* font-family: "Poppins", sans-serif !important; */
+    font-family: "Playfair Display", serif;
+}
+
+:root {
+            --c1: #d2a9a2; /* rose mauve — primary accent */
+            --c2: #e7d9d0; /* blush linen — light bg / hover */
+            --c3: #ceafa7; /* dusty rose — mid accent */
+            --c4: #d0bfb0; /* warm taupe — neutral accent */
+        }
+
+
+        
+.hidden{
+  display: none;
+} 
+
+/* Hero section */
+.hero{
+   width: 100%;
+   position: relative;
+}
+
+.hero img{
+   width: 100%;
+   height: auto;
+   display: block;
+}
+
+/* Anchor Tag */
+a{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn{
+  width: fit-content;
+  padding: 10px 30px;
+  border: none;
+  border: solid #b9858e 1px;
+  color: #b9858e;
+  font-family: "Poppins", sans-serif;
+}
+
+.btn:hover{
+   background-color: #b9858e;
+   color: white;
+   transition: 0.5s;
+}
+/* Section Titles */
+
+.sec__title{
+  font-family: "Playfair Display", serif;
+  font-size: xx-large;
+  margin: 2%;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 20px;
+  background-color: transparent;
+  color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.nav__menu {
+  display: flex;
+  gap: 20px;
+  /* padding-right: 20px; */
+}
+
+#menubar {
+  /* margin: 0 10%; */
+  display: none;
+}
+
+.sm__sidebar.active{
+   transform: translateX(0);
+}
+
+.sm__sidebar{
+  background-color: #daaab1;
+  width: 50%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  display: none;
+
+  transform: translateX(-120%);
+  transition: transform 1.5s ease;
+}
+.sm__sidebar__menu{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px;
+}
+.sm__sidebar__menu--link{
+  color: white;
+}
+#sm__sidebar__menu--close{
+  position: relative;
+  left: 90%;
+}
