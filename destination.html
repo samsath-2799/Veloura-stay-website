@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destination</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="destination.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h1 class="nav__title text-4xl font-bold">Veloura Stay</h1>
+        <i class="fa-solid fa-bars cursor-pointer" style="color: rgb(255, 255, 255)" id="menubar"></i>
+
+        <div class="nav__menu">
+            <a class="nav__menu__link" href="index.html">Home</a>
+            <a class="nav__menu__link" href="">Destinations</a>
+            <a class="nav__menu__link" href="">Experiences</a>
+            <a class="nav__menu__link" href="">Services</a>
+            <a class="nav__menu__link" href="">Book Your Stay</a>
+            <a class="nav__menu__link" href="contact.html">Contact Us</a>
+        </div>
+    </nav>
+    <!-- Small screen menubar -->
+      <div class="sidebar p-6 fixed top-0 z-20" style="width: 50%; height: 100vh; background-color: #DAAAB1;">
+        <div class="side-bar__menu text-white font-bold flex flex-col gap-5">
+            <p class="text-right cursor-pointer" id="closebar">X</p>
+            <a href="" class="">Home</a>
+            <a href="" class="">Destinations</a>
+            <a href="" class="">Experiences</a>
+            <a href="" class="Services</a>
+            <a href="" class="">Book Your Stay</a>
+            <a href="" class="">Contact Us</a>
+        </div>
+      </div>
+    <!-- Banner -->
+
+    <div class="banner">
+        <div class="banner-text text-center text-white py-44 md:py-64 m-auto b" style="width: 50%">
+            <h1 class="font-extrabold text-2xl md:text-3xl">Veloura Holiday</h1>
+            <h1 class="font-extrabold text-2xl md:text-3xl mb-4">Resorts</h1>
+            <p class="text-lg md:text-xl">
+                Found in the most fascinating places on the planet, our exceptional
+                one-off resorts set the stage for an extraordinary escape.
+            </p>
+            <p
+                class="inline-block mt-5 bg-white text-black p-2 rounded cursor-pointer hover:bg-black hover:text-white transition-all duration-700">
+                Explore Now
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-4 inline-block">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                </svg>
+            </p>
+        </div>
+    </div>
+
+    <!-- small descp -->
+
+    <div class="our-resorts mt-10 p-4">
+        <h1 class="font-semibold text-xl md:text-3xl text-gray-400">Our Resorts</h1>
+        <div class="our-resorts__sub text-center m-auto mt-12" style="width: 60%;">
+            <h1 class=" text-lg md:text-xl mb-4">Your One-Of-A-Kind Escape</h1>
+            <p class=" text-base md:text-lg">Explore One&Only's collection of 14 luxury resorts around the world. From
+                secluded beaches to untouched wilderness, dynamic cities, and breathtaking alpine settings, find your
+                freedom in One&Only's captivating Resorts and Private Homes.</p>
+            <p
+                class="inline-block  border-2 border-black px-8 py-2 mt-5 hover:bg-black hover:text-white cursor-pointer transition-all duration-700">
+                Enquire</p>
+        </div>
+    </div>
+
+    <!-- imageslider -->
+    <div class="image-container mx-auto mt-12 mb-14" style="width: 90%; height: 500px;">
+        <img src="" alt="" id="slider" style="width: 100%;display: block; height: 500px; transition: 0.1s;">
+    </div>
+
+    <!-- search -->
+    <div class="input-container mx-auto" style="width: 60%;">
+        <input type="text " placeholder="Search Destination...." class="border border-black p-2 rounded-md shadow-lg "
+            style="width: 100%;" id="searchbar">
+    </div>
+
+    <!-- Cards -->
+
+    <div class="card-container grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mx-10 lg:mx-48 my-28 gap-4 "
+        id="destination">
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c1.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Moonlight Basin, Montana</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c2.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura The Palm, Dubai</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c3.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Aesthetics, Athens</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c4.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura One za'abeel</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c5.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Reethi Rah, Maldives</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c6.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Mandarina, Mexico</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c7.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Saint Géran, Mauritius</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c8.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Royal Mirage, Dubai</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c9.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Kéa Island, Greece</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c10.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Palmilla, Los Cabos</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c11.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Nyungwe House, Rwanda</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c12.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Cape Town, South Africa</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="cards mb-10 md:mb-14" id="show">
+            <img src="./media/c13.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Gorilla's Nest, Rwanda</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+
+        <div class="card mb-10 md:mb-14" id="show">
+            <img src="./media/c14.webp" alt="" class="mb-5" style="width: 100%; height: 317px;">
+            <h1 class="font-bold text-xl mb-3">Veloura Portonovi, Montenegro</h1>
+            <p class="mb-3">Soaring high above the fragrant pines and sparkling peaks of Big Sky, Moonlight Basin
+                glistens
+                with off-piste glamour and the promise of stories, yet to be written.
+            </p>
+            <p class="cursor-pointer text-gray-600 font-medium">Explore</p>
+        </div>
+    </div>
+
+    <!-- slide1 -->
+
+    <div class="slide-container relative ml-36 hidden xl:block mb-56" style="">
+        <div class="slide-container__s1 py-28 px-12" style="background-color: #F7F7F7; width:60%; height: 420px;">
+            <div class="" style="width: 300px;">
+                <h1 class="font-bold text-2xl mb-2">COMING SOON</h1>
+                <p class="">Explore our ever-growing collection of One&Only Resorts and Private Homes, coming soon to
+                    the planet’s most extraordinary beach, wilderness, and urban locations.</p>
+                <p
+                    class="inline-block border border-black px-4 py-2 mt-4 hover:bg-black hover:text-white cursor-pointer transition-all duration-700">
+                    Explore</p>
+            </div>
+
+        </div>
+
+        <div class="slide-container__s2 absolute top-10 left-96">
+            <img src="./media/slide1.webp" alt="" class="ml-10" style="width: 650px; height: 420px;">
+        </div>
+    </div>
+
+
+    <!-- domestic cards -->
+    <div class="domestic-cards">
+        <h1 class="text-xl md:text-4xl font-bold mb-7 pl-4 text-gray-400">Popular Domestic Destinations</h1>
+
+        <div class="card2-container mx-10">
+
+            <div class="cards2 text-center border  border-black rounded-lg shadow-md mr-4"
+                style="width: 400px; height: 350px;">
+                <img src="./media/d1.jpg" alt="" class="mb-5" style="width: 100%; height: 250px;">
+                <p>New Delhi</p>
+                <p class="mb-2">4568 Properties</p>
+            </div>
+
+            <div class="cards2 text-center border  border-black rounded-lg shadow-md mr-4"
+                style="width: 400px; height: 350px;">
+                <img src="./media/d2.jpg" alt="" class="mb-5" style="width: 100%; height: 250px;">
+                <p>Mumbai</p>
+                <p class="mb-2">4568 Properties</p>
+            </div>
+
+            <div class="cards2 text-center border  border-black rounded-lg shadow-md mr-4"
+                style="width: 400px; height: 350px;">
+                <img src="./media/d3.jpg" alt="" class="mb-5" style="width: 100%; height: 250px;">
+                <p>Goa</p>
+                <p class="mb-2">4568 Properties</p>
+            </div>
+
+            <div class="cards2 text-center border  border-black rounded-lg shadow-md mr-4"
+                style="width: 400px; height: 350px;">
+                <img src="./media/d4.jpg" alt="" class="mb-5" style="width: 100%; height: 250px;">
+                <p>Chennai</p>
+                <p class="mb-2">4568 Properties</p>
+            </div>
+
+            <div class="cards2 text-center border  border-black rounded-lg shadow-md mr-4"
+                style="width: 400px; height: 350px;">
+                <img src="./media/d5.jpg" alt="" class="mb-5" style="width: 100%; height: 250px;">
+                <p>Kolkata</p>
+                <p class="mb-2">4568 Properties</p>
+            </div>
+
+            <div class="cards2 text-center border  border-black rounded-lg shadow-md mr-4"
+                style="width: 400px; height: 350px;">
+                <img src="./media/d6.jpg" alt="" class="mb-5" style="width: 100%; height: 250px;">
+                <p>Hyderabad</p>
+                <p class="mb-2">4568 Properties</p>
+            </div>
+
+            <div class="cards2 text-center border  border-black rounded-lg shadow-md mr-4"
+                style="width: 400px; height: 350px;">
+                <img src="./media/d7.jpg" alt="" class="mb-5" style="width: 100%; height: 250px;">
+                <p>Begaluru</p>
+                <p class="mb-2">4568 Properties</p>
+            </div>
+
+            <div class="cards2 text-center border  border-black rounded-lg shadow-md mr-4"
+                style="width: 400px; height: 350px;">
+                <img src="./media/d8.jpg" alt="" class="mb-5" style="width: 100%; height: 250px;">
+                <p>Jaipur</p>
+                <p class="mb-2">4568 Properties</p>
+            </div>
+
+            <div class="cards2 text-center border  border-black rounded-lg shadow-md mr-4"
+                style="width: 400px; height: 350px;">
+                <img src="./media/d9.jpg" alt="" class="mb-5" style="width: 100%; height: 250px;">
+                <p>Varanasi</p>
+                <p class="mb-2">4568 Properties</p>
+            </div>
+
+            <div class="cards2 text-center border  border-black rounded-lg shadow-md mr-4"
+                style="width: 400px; height: 350px;">
+                <img src="./media/d10.jpg" alt="" class="mb-5" style="width: 100%; height: 250px;">
+                <p>Pune</p>
+                <p class="mb-2">4568 Properties</p>
+            </div>
+
+
+        </div>
+    </div>
+
+    <!-- chatbot -->
+    <div class="chatbot inline-block relative" id="chatopen">
+        <div class="fixed right-16 bottom-16 bg-gray-600 p-3 rounded-full" s>
+            <i class="fa-solid fa-robot text-4xl md:text-5xl cursor-pointer text-white"></i>
+        </div>
+    </div>
+
+    <!-- chatmessge -->
+
+    <div class="chatmessage relative transition-all duration-1000 z-10">
+        <div
+            class="chat-container flex flex-col justify-between p-6 fixed bottom-36 right-16 text-white rounded-lg" style="background-color: #DAAAB1;">
+            <div class="self-end">
+                <p id="chatclose" class="cursor-pointer">X</p>
+            </div>
+
+            <div class="">
+                <p><i class="fa-solid fa-robot text-lg"></i> Hi I am Destination bot i am here to help you, you can ask
+                    me anything to find your favoite destination ....</p>
+            </div>
+
+            <div class="self-end">
+                <p>....typing</p>
+            </div>
+
+            <div class="border border-black rounded-lg flex ">
+                <input type="text" name="" id="chatint" class="py-2 px-1 bg-transparent" style="width: 100%;"
+                    placeholder="Send Queries.... ">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="w-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5" />
+                </svg>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <div class="footer__one">
+            <div class="footer__one__s1">
+                <div class="footer__title">
+                    <p>About Us</p>
+                    <i class="fa-solid fa-caret-down" style="color: rgb(3, 3, 3);"></i>
+                </div>
+
+                <div class="footer__list">
+                    <ul>
+                        <li>About Velourastay</li>
+                        <li>Our Resorts</li>
+                        <li>Private Homes</li>
+                        <li>Sustainability</li>
+                        <li>Community Impact</li>
+                        <li>Career</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer__one__s2">
+                <div class="footer__title">
+                    <p>Explore</p>
+                    <i class="fa-solid fa-caret-down" style="color: rgb(3, 3, 3);"></i>
+                </div>
+                <div class="footer__list">
+                    <ul>
+                        <li>Write a review</li>
+                        <li>Add a Place</li>
+                        <li>Join</li>
+                        <li>Travellers' Choice</li>
+                        <li>Help Centre</li>
+                        <li>Travel Stories</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="footer__one__s3">
+                <div class="footer__title">
+                    <p>Terms & Conditions</p>
+                    <i class="fa-solid fa-caret-down" style="color: rgb(3, 3, 3);"></i>
+                </div>
+                <div class="footer__list">
+                    <ul>
+                        <li>Privacy Policy</li>
+                        <li>Website Terms</li>
+                        <li>Sitemap</li>
+                        <li>Accessibility Statement</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <hr />
+        <div class="footer__two">
+
+            <div class="footer__two__s1">
+                <div class="footer__two__s1__icons">
+                    <i class="fa-brands fa-facebook modifier" style="color: #b9858e;"></i>
+                    <i class="fa-brands fa-x-twitter modifier" style="color: #b9858e;"></i>
+                    <i class="fa-brands fa-pinterest modifier" style="color: #b9858e;"></i>
+                    <i class="fa-brands fa-instagram modifier" style="color: #b9858e;"></i>
+                    <i class="fa-brands fa-youtube modifier" style="color: #b9858e;"></i>
+                    <i class="fa-brands fa-tiktok modifier" style="color: #b9858e;"></i>
+                </div>
+            </div>
+
+            <div class="footer__two__s2">
+                <p>2026 &copy; Velourastay All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+    <script src="destination.js"></script>
+</body>
+
+</html>
